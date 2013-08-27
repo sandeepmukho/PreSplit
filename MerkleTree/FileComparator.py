@@ -7,8 +7,8 @@ Can be used to compare files
 improvements needed - Diff should contain file content difference
 """
 def compareFile(filePath1, filePath2):
-	mt1 = MerkleTree('/tmp/a1.txt')
-	mt2 = MerkleTree('/tmp/a2.txt')
+	mt1 = MerkleTree(filePath1)
+	mt2 = MerkleTree(filePath2)
 	diffList = []
 	mt1.diff(mt2, 0, diffList)
 	if len(diffList) == 0:
@@ -27,6 +27,5 @@ def main():
 	compareFile('/tmp/a1.txt', '/tmp/a2.txt')	
 
 if  __name__ =='__main__':main()
-
-
 """
+
